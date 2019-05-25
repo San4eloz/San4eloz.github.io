@@ -1,0 +1,390 @@
+html {
+font-family: 'PT Sans Caption', sans-serif;
+font-size: 16px;
+line-height: 1.5;
+
+}
+
+
+img {  /* Все картинки теряют дополнительный отступ, который имеется по умолчанию */
+
+	display: inline-block;
+}
+
+a {
+	transition: 0.3s ease-out;
+}
+
+/*
+
+
+    font-family: 'Merriweather', serif;
+
+    font-family: 'PT Sans Caption', sans-serif;
+
+*/
+
+
+/* ...............
+
+	GRID 
+
+	................. */
+
+.container {
+
+	width: 1140px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.row:after {
+
+	clear: both;
+	content: "";
+	display: table;
+}
+
+/* Ширина и отступы между колонками */
+.col-4 {
+
+	width: 360px;
+	margin-right: 30px; /* отступ между колонками */
+	float: left; /* Обтекание колонок слева */
+
+
+}
+
+.col-4:last-child {
+	margin-right: 0px;
+
+}
+
+
+
+
+/* ...............
+
+	HEADER (название блока)
+
+	................. */
+
+
+.header {
+
+	/* Цвет (затемнение) фонового рисунка */
+	background: #2a394c;
+
+	/* Прописан путь к рисунку для фона */
+	background-image: url("../img/bg/bg-header.jpg");
+
+	/* Нужно для того, что бы фоновый рисунок не дублировался
+	при разной ширине экрана */
+	background-repeat: no-repeat;
+	
+	/* Выравнивание фона по центру экрана */
+	background-position: center;
+
+	/* Масштабирование фонового рисунка под экран */
+	background-size: cover;
+
+	/* Высота фонового изображения. В данном случае
+	высота будет занимать 100% от высоты экрана
+	на котором просматривается сайт */
+	height: 100vh;
+
+	/*Цвет текста в блоке */
+	color: white;
+
+	/* Выравнивание текста по центру */
+	text-align: center;
+
+	/* ----- Для выравнивания текста по центру экрана необходимо
+	 использовать технологию flex-box ----- */
+
+	 /* Выпавниваются блоки с текстом, до этого они были в столбик
+	 теперь, после данной команды, они стали в одну линию
+	 (не считая переноса текста тегом <br> в HTML коде */
+	 display: flex;
+	
+	/* Выравнивание блоков с текстом в колонку */
+	flex-direction: column;
+
+	/* Выравнивание колонки с текстом по горизонтали */
+	align-items: center;
+
+	/* Выравнивание по вертикали текста, текст в данном случае
+	становится в центре экрана */
+	justify-content: center;
+
+	/* Делаем блок "родителем", по которому будут ориентироваться 
+	другие блоки */
+	position: relative;
+}
+
+.header_title {
+
+	/* Размер шрифта, согласно как в шаблоне Фотошопа */
+	font-size: 56px;
+	
+	/* Высота строчки */
+	line-height: 62px;
+
+	/* Отступ снизу */
+	margin-bottom: 30px;
+
+	/* Вид шрифта */
+	font-family: 'Merriweather', serif;
+
+	/* Подтягивает блок и примыкающие к нему блоки вверх,
+	используется отрицательное значение со знаком "минус" */
+	margin-top: -50px;
+
+}
+
+.header_slogan {
+
+	/* Размер шрифта слогана */
+	font-size: 28px;
+	
+	/* Высота строчки */
+	line-height: 42px;
+
+}
+
+.header_arrow {
+
+	font-size: 48px;
+
+	/* Абсолютное позиционирование */
+	position: absolute;
+
+	/* Отступ снизу */
+	bottom: 50px;
+
+	/* Отступ слева */
+	left: 50%;
+
+	/* Высота, ширина */
+	width: 60px;
+	height: 50px;
+	
+	/* Отступ слева, отрицательное значение (со знаком минус)
+	т.к. width у нас 60 px */
+	margin-left: -30px;
+
+}
+
+
+
+/* ...............
+
+	Портфолио (название блока)
+
+	................. */
+
+.portfolio {
+
+	padding-top: 30px;
+	padding-bottom: 100px;
+}
+
+
+.portfolio_item {
+
+	margin-bottom: 20px;
+}
+
+
+	.title {            /* Стилизация слова "Портфолио" */
+	font-size: 46px;
+	line-height: 62px;
+	font-family: 'Merriweather', serif;
+	margin-bottom: 55px;
+	margin-top: 84px;
+	text-align: center;
+
+}
+
+	.portfolio_item_img {
+
+	margin-bottom: 17px;
+}
+
+	.portfolio_item_title {
+
+	font-family: 'PT Sans Caption', sans-serif;
+	font-size: 24px;
+	margin-bottom: 5px;
+	line-height: normal;
+
+}
+
+	.portfolio_item_title a {  /* Стилизация ссылок */
+
+	text-decoration: none; /* Убирем стандартное подчеркивание ссылки */
+	color: #000;
+	border-bottom: 1px solid #FFF;  /* Добавляем свое подчеркивание (тонкая линия, 
+	цвет черный) */
+}
+
+/* Добавляем эффекты ссылки с помощью псевдокласса "hover" */
+	.portfolio_item_title a:hover {
+
+	color: #0052c2;
+	border-color: rgba(0, 82, 194, 0.3);
+}
+
+	.portfolio_item_text {
+
+	font-family: 'PT Sans Caption', sans-serif;
+	font-size: 16px;
+	
+}
+
+	.portfolio_item_text p {
+
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+
+/* ...............
+
+	PORTFOLIO SINGLE PAGE
+
+	................. */
+
+	.portfolio-single-page {
+
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align: center;
+
+}
+
+	.portfolio-single-page img {
+
+	margin-bottom: 50px;
+	max-weight: 100%;
+	height: auto;
+	display: block; /* Что бы ссылка "Назад" перешла на следующую строчку */
+
+}
+	.button-back {
+
+		font-weight: 700; /* Значение шрифта что бы сделать его Bold */
+		text-decoration: none;
+		color: black;
+		text-transform: uppercase; /* Текст заглавными буквами */
+		letter-spacing: 1.6px; /* Расстояние между буквами */
+		display: inline-block;
+		border-width: 2px;
+		border-color: black;
+		border-style: solid; /* Стиль рамки, приямая линия */
+		border-radius: 50px; /* Скругление углов */
+		padding-top: 8px;    /* Внутренние отступы команды padding */
+		padding-bottom: 8px;
+		padding-left: 23px;
+		padding-right: 23px;                              
+
+		margin-bottom: 13px; /* Внешний отступ команды margin */
+
+		transition: 0.3s ease-out; /* Плавная подсветка кнопки и тип анимации */
+}
+	.button-back:hover {  /* Анимация при наведении на кнопку */
+		color: #FFF;
+		background-color: #0052c2;
+
+		}
+
+
+	/* ...............
+
+	FOOTER  (название блока)
+
+	................. */
+
+	.footer {
+		background-color: #061634;
+		color: #6479a2; /* Цвет текста в футере */
+		padding-top: 90px;
+		padding-bottom: 190px;
+	}
+
+	.footer p {
+
+		margin-top: 0px;
+		margin-bottom: 15px;
+
+	}
+
+	p.footer_name {
+
+		font-family: 'Merriweather', serif;
+		font-size: 28px;
+		margin-bottom: 10px;
+		line-height: normal;
+
+	}
+
+	p.footer_social {
+
+		color: white;
+	}
+
+	p.footer_social_icons {
+
+		color: white;
+		font-size: 32px;
+
+	}
+
+	p.footer_social_icons a {
+
+		color: white;
+		text-decoration: none; /* Убираем подчеркивание на ссылках */
+		margin-right: 30px;
+	}
+
+	p.footer_social_icons a:last-child {
+
+		margin-right: 0px;
+
+	}
+
+	p.footer_social_icons a:hover { /* Окрашивание иконок при навеении в желтый*/
+
+		color: #FFE400;
+	
+	}
+
+	.button {
+
+		font-weight: 700; /* Значение шрифта что бы сделать его Bold */
+		text-decoration: none;
+		color: white;
+		text-transform: uppercase; /* Текст заглавными буквами */
+		letter-spacing: 1.6px; /* Расстояние между буквами */
+		display: inline-block;
+		border-width: 2px;
+		border-color: white;
+		border-style: solid; /* Стиль рамки, приямая линия */
+		border-radius: 50px; /* Скругление углов */
+		padding-top: 8px;    /* Внутренние отступы команды padding */
+		padding-bottom: 8px;
+		padding-left: 23px;
+		padding-right: 23px;                              
+
+		margin-bottom: 13px; /* Внешний отступ команды margin */
+
+		transition: 0.3s ease-out; /* Плавная подсветка кнопки и тип анимации */
+
+	}
+
+	.button:hover {  /* Анимация при наведении на кнопку */
+		color: #061634;
+		background-color: white;
+
+
+	}
